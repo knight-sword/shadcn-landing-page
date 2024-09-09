@@ -52,9 +52,11 @@ export const Navbar = () => {
               href="/"
               className="ml-2 font-bold text-xl flex"
             >
+              <img className="w-9 h-7" src="./src/assets/Group1.png"></img>
               {/* <LogoIcon /> */}
-              lightojoy
             </a>
+            <span className="ml-2 text-xl text-purple-500 h-8">Lightojoy</span>
+            
           </NavigationMenuItem>
 
           {/* mobile */}
