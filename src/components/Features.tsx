@@ -13,27 +13,33 @@ import image4 from "../assets/looking-ahead.png";
 interface FeatureProps {
   title: string;
   description: string;
-  image: string;
 }
 
 const features: FeatureProps[] = [
   {
-    title: "Responsive Design",
+    title: "Booking Website",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image4,
+      "Trafft functions as a no-code website builder, automatically generating a booking page accessible through the Trafft dashboard. You can embed this page into your website, share it directly with clients, or even place it on your social media accounts.",
   },
   {
-    title: "Intuitive user interface",
+    title: "Customer Profile",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image3,
+      "Your clients can create profiles by clicking on the Login button in the upper right corner of your booking website. Under their customer profile, they can easily manage their appointments.",
   },
   {
-    title: "AI-Powered insights",
+    title: "Add Appointment to Calendar for Customers",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image,
+      "After scheduling an appointment, customers can conveniently add the details to their calendars by clicking on the 'add to calendar' button. The appointment will automatically be added to their Google, Outlook, or iCal calendars.",
+  },
+  {
+    title: "Custom domain",
+    description:
+      "If you have your own domain, you have the option to host your Trafft booking page on that domain instead of having lightojoy.com in the URL.",
+  },
+  {
+    title: "Customer Panel Access",
+    description:
+      "When creating a customer profile, you can send customers an email with login details. This enables them to set a password and access their profile, where they can view all their appointments, make payments, leave reviews, and more.",
   },
 ];
 
@@ -71,21 +77,21 @@ export const Features = () => {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map(({ title, description, image }: FeatureProps) => (
+        {features.map(({ title, description }: FeatureProps) => (
           <Card key={title}>
             <CardHeader>
               <CardTitle>{title}</CardTitle>
             </CardHeader>
 
             <CardContent>{description}</CardContent>
-
+{/* 
             <CardFooter>
               <img
                 src={image}
                 alt="About feature"
                 className="w-[200px] lg:w-[300px] mx-auto"
               />
-            </CardFooter>
+            </CardFooter> */}
           </Card>
         ))}
       </div>

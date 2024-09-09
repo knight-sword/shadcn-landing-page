@@ -30,44 +30,43 @@ const pricingList: PricingProps[] = [
     popular: 0,
     price: 0,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get Started",
-    benefitList: [
-      "1 Team member",
-      "2 GB Storage",
-      "Upto 4 pages",
-      "Community support",
-      "lorem ipsum dolor",
-    ],
-  },
-  {
-    title: "Premium",
-    popular: 1,
-    price: 5,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
+      "",
     buttonText: "Start Free Trial",
     benefitList: [
-      "4 Team member",
-      "4 GB Storage",
-      "Upto 6 pages",
-      "Priority support",
-      "lorem ipsum dolor",
+      "5 users",
+      "1 location",
+      "200 emails / month",
+      "Booking website",
+      "Google, Outlook or Apple calendar sync",
+      "Coupons",
     ],
   },
   {
-    title: "Enterprise",
+    title: "Starter",
     popular: 0,
-    price: 40,
+    price: 10,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+      "",
+    buttonText: "Get Started",
     benefitList: [
-      "10 Team member",
-      "8 GB Storage",
-      "Upto 10 pages",
-      "Priority support",
-      "lorem ipsum dolor",
+      "10 users",
+      "Unlimited emails",
+      "Unlimited locations",
+      "Branding Removal",
+    ],
+  },
+  {
+    title: "Scaling",
+    popular: 0,
+    price: 20,
+    description:
+      "",
+    buttonText: "Get Started",
+    benefitList: [
+      "20 users",
+      "Unlimited emails",
+      "Unlimited locations",
+      "Branding Removal",
     ],
   },
 ];
@@ -76,19 +75,17 @@ export const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="container py-24 sm:py-32"
+      className="mx-8 py-24 sm:py-32 "
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center">
-        Get
+        Plans
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           {" "}
-          Unlimited{" "}
+          and{" "}
         </span>
-        Access
+        pricing
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pricingList.map((pricing: PricingProps) => (

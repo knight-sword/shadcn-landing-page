@@ -1,11 +1,27 @@
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import { Resend } from 'resend';
+
+
 
 export const Newsletter = () => {
-  const handleSubmit = (e: any) => {
+  const resend = new Resend('re_QNYU5but_DPN2uhT1S2jZLeesJ27PYxTz');
+
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     console.log("Subscribed!");
-  };
+    const { data, error } = await resend.emails.send({
+      from: 'Acme <Acme@lightojoy.com>',
+      to: ['296490231@qq.com'],
+      subject: 'Hello World',
+      html: '<strong>It works!</strong>',
+    });
+  
+    if (error) {
+      return console.error({ error });
+    }
+  
+    console.log({ data });  };
 
   return (
     <section id="newsletter">
@@ -27,7 +43,7 @@ export const Newsletter = () => {
           onSubmit={handleSubmit}
         >
           <Input
-            placeholder="leomirandadev@gmail.com"
+            placeholder="xxx@gmail.com"
             className="bg-muted/50 dark:bg-muted/80 "
             aria-label="email"
           />
